@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('https://images.unsplash.com/photo-1496309732348-3627f3f040ee?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            
+            color: #333;
+        }
+    
+        .container {
+            width: 400px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+            color: #fff;
+            animation: fadeIn 1s ease;
+            
+        }
+    
+        
+    
+        h2 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #fff;
+        }
+    
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 14px;
+            color: #fff;
+
+        }
+    
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+    
+        input[type="submit"] {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+    
+        input[type="submit"]:hover {
+            background-color: #1e8449;
+
+
+        }
+    
+        .error {
+            color: #ff6666;
+            font-size: 12px;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm" action="succes.html" method="post" onsubmit="return validateForm()">
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <div id="usernameError" class="error"></div>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <div id="emailError" class="error"></div>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <div id="passwordError" class="error"></div>
+
+            <label for="address">Address/Message:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+            <div id="addressError" class="error"></div>
+
+            <label for="contact">Contact Number:</label>
+            <input type="text" id="contact" name="contact" required>
+            <div id="contactError" class="error"></div>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
